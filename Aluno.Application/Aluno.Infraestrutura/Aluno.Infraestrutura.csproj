@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Aluno.Application\Aluno.Application.csproj" />
+    <ProjectReference Include="..\Aluno.Data\Aluno.Data.csproj" />
+    <ProjectReference Include="..\Aluno.Domain\Aluno.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
