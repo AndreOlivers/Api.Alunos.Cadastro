@@ -33,17 +33,17 @@ namespace Aluno.Service.Services
             return await _repository.GetByName(nome);
         }
 
-        public async Task<AlunoEntity> PostAluno(AlunoEntity aluno)
+        public async Task<AlunoEntity> PostStudents(AlunoEntity aluno)
         {
             return await _repository.Create(aluno);
         }
 
-        public async Task<AlunoEntity> PutAluno(AlunoEntity aluno)
+        public async Task<AlunoEntity> PutStudents(AlunoEntity aluno)
         {
-            return await _repository.Create(aluno);
+            return await _repository.Update(aluno);
         }
 
-        public async Task<bool> DeleteAluno(int id)
+        public async Task<bool> DeleteStudents(int id)
         {
             return await _repository.Delete(id);
         }

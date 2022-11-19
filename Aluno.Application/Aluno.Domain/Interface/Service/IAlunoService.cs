@@ -13,8 +13,8 @@ namespace Aluno.Domain.Interface.Service
         Task<IEnumerable<AlunoEntity>> GetAll();
         Task<IEnumerable<AlunoEntity>> GetByName(string nome);
 
-        Task<AlunoEntity> PostAluno(AlunoEntity aluno);
-        Task<AlunoEntity> PutAluno(AlunoEntity aluno);
-        Task<bool> DeleteAluno(int id);
+        Task<AlunoEntity> PostStudents(AlunoEntity aluno);
+        Task<AlunoEntity> PutStudents(AlunoEntity aluno);
+        Task<bool> DeleteStudents(int id);
     }
 }
