@@ -87,7 +87,7 @@ namespace Aluno.Data.Repository
 
         public async Task<bool> Delete(int id)
         {
-            var result = await _dataSet.FirstOrDefaultAsync(a => a.Id == entity.Id);
+            var result = await _dataSet.FirstOrDefaultAsync(a => a.Id == id);
             try
             {
                 if (result == null)
