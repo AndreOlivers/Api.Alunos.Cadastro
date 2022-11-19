@@ -21,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Aluno.Data\Aluno.Data.csproj" />
     <ProjectReference Include="..\Aluno.Domain\Aluno.Domain.csproj" />
+    <ProjectReference Include="..\Aluno.Infraestrutura\Aluno.Infraestrutura.csproj" />
   </ItemGroup>
 
 </Project>

@@ -5,11 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="6.8.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Aluno.Application\Aluno.Application.csproj" />
     <ProjectReference Include="..\Aluno.Data\Aluno.Data.csproj" />
     <ProjectReference Include="..\Aluno.Domain\Aluno.Domain.csproj" />
     <ProjectReference Include="..\Aluno.Service\Aluno.Service.csproj" />

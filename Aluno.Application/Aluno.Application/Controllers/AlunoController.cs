@@ -55,7 +55,7 @@ namespace Aluno.Application.Controllers
             }
         }
 
-        [HttpGet]
+        [HttpGet("{nome}")]
         public async Task<ActionResult> GetStudentsName(string nome)
         {
             if (string.IsNullOrEmpty(nome))
@@ -112,7 +112,7 @@ namespace Aluno.Application.Controllers
         #endregion
 
         #region PUT
-        [HttpPut("{id}")]
+        [HttpDelete  ("{id}")]
         public async Task<ActionResult> DeleteStudents(int id)
         {
             if (id < 0)

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Aluno.Infraestrutura.DependecyInjection
 {
-    public class ConfigureRespository
+    public class ConfigureRepository
     {
         public static void ConfigureDependeciesRepository(IServiceCollection serviceCollection)
         {

@@ -75,7 +75,7 @@ namespace Aluno.Data.Repository
                 if (result == null)
                     return null;
 
-                _dataSet.Add(entity);
+                _dataSet.Update(entity);
                 await _context.SaveChangesAsync();
             }
             catch (Exception ex)
