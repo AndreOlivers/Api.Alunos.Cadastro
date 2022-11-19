@@ -9,11 +9,12 @@ namespace Aluno.Domain.Interface
 {
     public interface IRepository<T> where T : EntityBase
     {
-        Task<IEnumerable<T>> GetIdAsync(int id);
-        Task<T> GetAllAsync();
+        Task<T> GetIdAsync(int id);
+        Task<IEnumerable<T>> GetAllAsync();
+        Task<IEnumerable<T>> GetByName(string name);
         Task<T> Create(T item);
         Task<T> Update(T item);
-        Task<T> Delete(T item);
+        Task<bool> Delete(int id);
 
     }
 }

@@ -12,11 +12,10 @@ namespace Aluno.Data.Context
     {
         public MyContext CreateDbContext(string[] args)
         {
-            var connectionString = "";
+            var connectionString = "Server=.\\SQLEXPRESS;Database=AppAlunoAPI;Trusted_Connection=True;";
             var optionBuilder = new DbContextOptionsBuilder<MyContext>();
             optionBuilder.UseSqlServer(connectionString);
             return new MyContext(optionBuilder.Options);
-
         }
     }
 }
