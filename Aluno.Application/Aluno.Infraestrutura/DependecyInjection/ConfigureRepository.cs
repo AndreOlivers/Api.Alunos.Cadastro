@@ -1,5 +1,7 @@
-﻿using Aluno.Data.Repository;
+﻿using Aluno.Data.Implemations;
+using Aluno.Data.Repository;
 using Aluno.Domain.Interface;
+using Aluno.Domain.RepositoryMethods;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -14,6 +16,7 @@ namespace Aluno.Infraestrutura.DependecyInjection
         public static void ConfigureDependeciesRepository(IServiceCollection serviceCollection)
         {
             serviceCollection.AddScoped(typeof(IRepository<>), typeof(BaseRepository<>));
+            serviceCollection.AddScoped<IUserRepository, UserImplementation>();
         }
     }
 }

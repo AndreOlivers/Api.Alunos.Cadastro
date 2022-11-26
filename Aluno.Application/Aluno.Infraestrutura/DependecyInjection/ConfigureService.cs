@@ -9,6 +9,7 @@ namespace Aluno.Infraestrutura.DependecyInjection
         public static void ConfigureDependeciesService(IServiceCollection serviceCollection)
         {
             serviceCollection.AddTransient<IAlunoService, AlunoService>();
+            serviceCollection.AddTransient<ILoginService, LoginService>();
         }
     }
 }
