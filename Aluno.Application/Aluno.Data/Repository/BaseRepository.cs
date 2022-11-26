@@ -21,7 +21,7 @@ namespace Aluno.Data.Repository
             _dataSet = _context.Set<T>();
         }
 
-        public async Task<IEnumerable<T>>GetAllAsync()
+        public async Task<IEnumerable<T>> GetAllAsync()
         {
             try
             {
@@ -69,13 +69,14 @@ namespace Aluno.Data.Repository
 
         public async Task<T> Update(T entity)
         {
-            var result = await _dataSet.FirstOrDefaultAsync(a => a.Id == entity.Id);
+            var result = await _dataSet.SingleOrDefaultAsync(a => a.Id.Equals(entity.Id));
+            //var exists = await .GetBookmark(result.Id);
             try
             {
                 if (result == null)
                     return null;
 
-                _dataSet.Update(entity);
+                _context.Entry(result).CurrentValues.SetValues(entity);
                 await _context.SaveChangesAsync();
             }
             catch (Exception ex)

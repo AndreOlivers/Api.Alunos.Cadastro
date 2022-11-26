@@ -102,7 +102,15 @@ namespace Aluno.Application.Controllers
             }
             try
             {
-                return Ok(await _service.PutStudents(aluno));
+                var result = await _service.PutStudents(aluno); 
+                if(result != null)
+                {
+                    return Ok();
+                }
+                else
+                {
+                    return BadRequest();
+                }
             }
             catch (ArgumentException e)
             {
@@ -111,8 +119,8 @@ namespace Aluno.Application.Controllers
         }
         #endregion
 
-        #region PUT
-        [HttpDelete  ("{id}")]
+        #region DELETE
+        [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteStudents(int id)
         {
             if (id < 0)
